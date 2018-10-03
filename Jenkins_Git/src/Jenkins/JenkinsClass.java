@@ -7,9 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 public class JenkinsClass {
-	public WebDriver driver;
-@Test
-public void Login(){
+	public static WebDriver driver;
+public static void main(String[] args){
 	
 	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\Downloads\\chromedriver_win32\\chromedriver.exe");
 	driver=new ChromeDriver();
@@ -18,8 +17,8 @@ public void Login(){
 	driver.manage().window().maximize();
 	System.out.println("Title is : "+driver.getTitle());
 	System.out.println("Welcome to world");
-	driver.close();
-	
+	driver.quit();
 	
 }
+
 }
